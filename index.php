@@ -25,7 +25,7 @@ font-family: "Tahoma"
 <h1>	 Bill Splitter </h1>
 
 <div class="container">
-<form method='GET' action= 'index.php' >
+<form method='GET' action= 'cool.php' >
     <div>
         <label for="split">Split by # of People:</label>
         <input type="text" id="name" name="numpeople">
@@ -35,20 +35,28 @@ font-family: "Tahoma"
     <div>
         <label for="tabtotal">Tab Total</label>
         <input type="text" id="mail" name="totalnum">
-    </div>
+</div>
+
+
     <br>
     <div>
     <label for='tip'>Tip Amount</label>
            <select name='tip' id='tip'>
                <option value='select'>Select</option>
-               <option value='10' >10%</option>
-               <option value='15' >15%</option>
-               <option value='18' >18%</option>
-               <option value='20' >20%</option>
-               <option value='25' >25%</option>
+               <option value='.10' >10%</option>
+               <option value='.15' >15%</option>
+               <option value='.18' >18%</option>
+               <option value='.20' >20%</option>
+               <option value='.25' >25%</option>
            </select>
     </div>
     <br>
+    <div>
+        <label for="roundup">Round Up?</label>
+        <input type="checkbox" name="roundup" value="Yes" />
+    </div>
+    <br>
+
     <input type = 'submit' class = 'btn btn-primary btn-small' value = 'Calculate'>
 
 </form>
