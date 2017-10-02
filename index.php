@@ -1,4 +1,9 @@
+
+
+<?php require ('cool.php');?>
+
 <!DOCTYPE html>
+
 <html>
  <head>
    <title></title>
@@ -17,29 +22,31 @@ h1 {    text-align: center;
 font-family: "Tahoma"
 }
 
+ul {color: blue;}
+
  </style>
 
 <meta charset ='utf-8'>
  </head>
  <body>
 <h1>	 Bill Splitter </h1>
-
 <div class="container">
-<form method='GET' action= 'cool.php' >
+<form method='GET'  >
     <div>
-        <label for="split">Split by # of People:</label>
-        <input type="text" id="name" name="numpeople">
+        <label for="split">Split by # of People: <font color="red">(required)</font></label>
+        <input type="text" id="numpeople" name="numpeople">
     </div>
 <br>
 <br>
     <div>
-        <label for="tabtotal">Tab Total</label>
-        <input type="text" id="mail" name="totalnum">
+        <label for="tabtotal">Tab Total <font color="red">(required)</font></label>
+        <input type="text" id="totalnum" name="totalnum">
 </div>
 
 
     <br>
     <div>
+      <br>
     <label for='tip'>Tip Amount</label>
            <select name='tip' id='tip'>
                <option value='select'>Select</option>
@@ -59,9 +66,23 @@ font-family: "Tahoma"
 
     <input type = 'submit' class = 'btn btn-primary btn-small' value = 'Calculate'>
 
+
+<?php if (isset($errors)): ?>
+
+  <ul>
+    <?php foreach($errors as $error): ?>
+      <li> <?=$error?></li>
+    <?php endforeach; ?>
+    <li><?php if( $_GET['tip'] == 'select') { echo 'Select Tip Amount'; };?></li>
+  </ul>
+<?php endif; ?>
+
+<div>
+<p>The total per person is: <?php echo $amount;?> </p>
+</div>
 </form>
-	</div>
+
+
 
 
 </body>
-</html>
