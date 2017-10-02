@@ -6,7 +6,7 @@
 
 <html>
  <head>
-   <title></title>
+
 
    <style type="text/css">
    label{
@@ -31,20 +31,18 @@ ul {color: blue;}
  <body>
 <h1>	 Bill Splitter </h1>
 <div class="container">
-<form method='GET'  >
+  <form method='GET'  >
     <div>
-        <label for="split">Split by # of People: <font color="red">(required)</font></label>
+        <label for="numpeople">Split by # of People: <font color="red">(required)</font></label>
         <input type="text" id="numpeople" name="numpeople">
     </div>
 <br>
 <br>
     <div>
-        <label for="tabtotal">Tab Total <font color="red">(required)</font></label>
+        <label for="totalnum">Tab Total <font color="red">(required)</font></label>
         <input type="text" id="totalnum" name="totalnum">
 </div>
-
-
-    <br>
+  <br>
     <div>
       <br>
     <label for='tip'>Tip Amount</label>
@@ -60,7 +58,7 @@ ul {color: blue;}
     <br>
     <div>
         <label for="roundup">Round Up?</label>
-        <input type="checkbox" name="roundup" value="Yes" />
+        <input type="checkbox" id="roundup" name="roundup" value="Yes" />
     </div>
     <br>
 
@@ -81,7 +79,7 @@ ul {color: blue;}
 <p>The total per person is: <?php echo $amount;?> </p>
 </div>
 </form>
-
+</div>
 
 
 
