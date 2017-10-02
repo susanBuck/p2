@@ -25,7 +25,7 @@ font-family: "Tahoma"
 ul {color: blue;}
 
  </style>
-
+<title>Bill Splitter</title>
 <meta charset ='utf-8'>
  </head>
  <body>
@@ -33,13 +33,14 @@ ul {color: blue;}
 <div class="container">
   <form method='GET'  >
     <div>
-        <label for="numpeople">Split by # of People: <font color="red">(required)</font></label>
+        <label for="numpeople">Split by # of People: <div style="color: red; ">(required)</div></label>
         <input type="text" id="numpeople" name="numpeople">
     </div>
+    <br>
 <br>
 <br>
     <div>
-        <label for="totalnum">Tab Total <font color="red">(required)</font></label>
+        <label for="totalnum">Tab Total <div style="color: red; ">(required)</div></label>
         <input type="text" id="totalnum" name="totalnum">
 </div>
   <br>
