@@ -33,14 +33,14 @@ ul {color: blue;}
 <div class="container">
   <form method='GET'  >
     <div>
-        <label for="numpeople">Split by # of People: <div style="color: red; ">(required)</div></label>
+        <label for="numpeople">Split by # of People: <strong>REQUIRED</strong></label>
         <input type="text" id="numpeople" name="numpeople">
     </div>
     <br>
 <br>
 <br>
     <div>
-        <label for="totalnum">Tab Total <div style="color: red; ">(required)</div></label>
+        <label for="totalnum">Tab Total <strong>REQUIRED</strong></label>
         <input type="text" id="totalnum" name="totalnum">
 </div>
   <br>
